@@ -5,10 +5,10 @@ $(document).ready(function() {
 	var losses = 0
 		
 	
-	var crystals = ["http://icons.iconarchive.com/icons/aha-soft/jewelry/256/Ruby-icon.png", 
-					"http://orig07.deviantart.net/07c1/f/2013/275/e/7/green_gem_by_mexicanbannananinja-d6ozb26.png", 
-					"http://www.reijotelaranta.fi/data/kuvat/cache/timantti_1.png-150x150.png", 
-					"http://stockpictures.io/wp-content/uploads/2016/06/8682-blue-gems-sapphire-stones-sparkling-shining-shiny-glittering-deep-blue-precious-crystals-bright-colorful-expensive.png"]
+	var crystals = [/*"http://icons.iconarchive.com/icons/aha-soft/jewelry/256/Ruby-icon.png"*/"assets/images/Ruby-icon.png", 
+					/*"http://orig07.deviantart.net/07c1/f/2013/275/e/7/green_gem_by_mexicanbannananinja-d6ozb26.png"*/"assets/images/green_gem_by_mexicanbannananinja-d6ozb26.png", 
+					/*"http://www.reijotelaranta.fi/data/kuvat/cache/timantti_1.png-150x150.png"*/"assets/images/timantti_1.png-150x150.png", 
+					/*"http://stockpictures.io/wp-content/uploads/2016/06/8682-blue-gems-sapphire-stones-sparkling-shining-shiny-glittering-deep-blue-precious-crystals-bright-colorful-expensive.png"*/"assets/images/8682-blue-gems-sapphire-stones-sparkling-shining-shiny-glittering-deep-blue-precious-crystals-bright-colorful-expensive.png"]
 	
  
 var randomTarget = Math.floor(Math.random() * 111) + 9
