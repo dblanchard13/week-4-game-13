@@ -1,10 +1,17 @@
 body {
-	margin: -30px auto auto auto;
+	margin: 0 auto;
 	background-image: url("https://www.hdwallpapers.in/walls/abstract_color_background_picture_8016-wide.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: black;
 	
+}
+/*My background image is smaller than my body so There is blank space on the far right and bottom 
+of the bottom of the page.*/
+
+* {
+  box-sizing: border-box;
 }
 
 .jumbotron {
@@ -15,9 +22,9 @@ body {
 	width: 100%;
 	text-align: center;
 	margin-bottom: 0;
-	background-image: black; /*url("http://resatherapy.co.uk/data/uploads/crystal_banner.jpg");*/
+	background-image: black; 
 	max-height: 140px;
-	/*border: 1px solid black;*/
+	
 
 }
 
@@ -53,12 +60,11 @@ p {
 	font-size: 18px !important;
 }
 
-.crystal-image {
+#crystals {
 	
 	margin: 0 auto 30px auto;
 	width: 80%;
 	text-align: center;
-	/*background-color: #EEF7F9;*/
 	background-image: url("http://www.nozeens.com/wp-content/uploads/2015/01/simple-gray-background-ardrgtbo.jpg");
 	padding: 20px;
 	border: 1.5px solid #516984;
@@ -66,7 +72,6 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
 	
-
 }
 
 section {
@@ -74,11 +79,13 @@ section {
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-	/*background-color: #99CCFF;*/
 	padding: 20px;
 	border: 1.5px solid #516984;
 	margin-bottom: 30px;
 
 }
+	
+
+	
 
 
