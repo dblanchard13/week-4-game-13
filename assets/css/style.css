@@ -1,6 +1,7 @@
 body {
 	margin: 0 auto;
-	background-image: url("https://www.hdwallpapers.in/walls/abstract_color_background_picture_8016-wide.jpg");
+	/*background-image: url("https://www.hdwallpapers.in/walls/abstract_color_background_picture_8016-wide.jpg");*/
+	background-image: url("../images/abstract_color_background_picture_8016-wide.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -65,7 +66,8 @@ p {
 	margin: 0 auto 30px auto;
 	width: 80%;
 	text-align: center;
-	background-image: url("http://www.nozeens.com/wp-content/uploads/2015/01/simple-gray-background-ardrgtbo.jpg");
+	/*background-image: url("http://www.nozeens.com/wp-content/uploads/2015/01/simple-gray-background-ardrgtbo.jpg");*/
+	background-image: url("../images/simple-gray-background-ardrgtbo.jpg");
 	padding: 20px;
 	border: 1.5px solid #516984;
 	background-size: cover;
@@ -75,7 +77,8 @@ p {
 }
 
 section {
-	background-image: url("http://www.diocesisdesantander.com/wp-content/uploads/2015/11/fondo.jpg");
+	/*background-image: url("http://www.diocesisdesantander.com/wp-content/uploads/2015/11/fondo.jpg");*/
+	background-image: url("../images/fondo-section-background.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
