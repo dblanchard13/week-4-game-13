@@ -1,3 +1,4 @@
+// Nice job putting everything insude the document ready block
 $(document).ready(function() {
 	
 	var wins = 0
@@ -13,19 +14,33 @@ $(document).ready(function() {
 					/*"http://stockpictures.io/wp-content/uploads/2016/06/8682-blue-gems-sapphire-stones-sparkling-shining-shiny-glittering-deep-blue-precious-crystals-bright-colorful-expensive.png"*/
 					"assets/images/8682-blue-gems-sapphire-stones-sparkling-shining-shiny-glittering-deep-blue-precious-crystals-bright-colorful-expensive.png"]
 	
- 
-	var randomTarget = Math.floor(Math.random() * 111) + 9
+ 	
+ 	// Since the string of code for generating random numbers
+ 	// is rather unwieldy I'd suggest placing it in a utility function
+	var randomTarget = getRandomNum(120, 9)
 	var userScore
+
+	function getRandomNum (max, min) {
+	  return Math.floor(Math.random() * (max - min) + min)
+	}
+
+	// Totally stylistic comment: your indentation is sorta all over the place.
+	// While it seems like a trivial thing to worry about; when it comes to 
+	// code maintainability, consistent indentation is a huge helper.
  		function setGame() {
 			// console.log(randomTarget)
 			$("#crystals").empty()
 			$("#randomTarget").text(randomTarget)
 			userScore = 0
 				$("#userScore").text(userScore)
+
+			// Really nice job generating the crystal images dynamically!
 			for (var i = 0; i < crystals.length; i++) {
 				
-				var randomValue = Math.floor(Math.random() * 11) + 1
+				var randomValue = getRandomNum(12, 1)
 				// the img tag is passing each link in crystals to the src and give it width 
+				// You could also give it width by defining a css rule for .crystal-image
+				// and setting `width: 75px`. Would look a bit nicer too.
 				var imageCrystal = $("<img src='" + crystals[i] + "'width='75px'>")
 				
 	// assigning the imageCrystal a class called crystal-image for CSS styling
@@ -48,22 +63,31 @@ $(document).ready(function() {
 			$("body").on("click", ".crystal-image", function() {
 		
 				var crystalValue = ($(this).attr("data-crystalvalue"))
-				console.log(crystalValue)
+
+				// Generally speaking, you'll want to remove console.logs from your production apps
+				// console.log(crystalValue)
 				// console.log(userScore, crystalValue)
 				
-				userScore = parseInt(userScore) + parseInt(crystalValue)
+				// You don't need to use parseInt on userScore since it's already a number 🙃
+				userScore += parseInt(crystalValue)
 				// console.log(userScore)
 				$("#userScore").text(userScore)
 					
-					if (userScore == randomTarget) {
+					// You'll want to get in the habit of using triple equals instead of double.
+					// Because double equals does type coercion before checking values, you can
+					// sometime have the check return true when you wouldn't expect it to
+					// and that can cause some really confusing bugs 🐛
+					if (userScore === randomTarget) {
 						wins++
-						randomTarget = Math.floor(Math.random() * 111) + 9
+						randomTarget = getRandomNum(120, 9)
+						// I'd recommend not mixing styles for DOM manipulation as much as you can help it.
+						// So either roll with all vanilla JS or all jQuery.
 						document.querySelector("#wins").innerHTML = "Wins: " + wins
 						setGame()
 					}
 					else if (userScore > randomTarget){
 						losses++
-						randomTarget = Math.floor(Math.random() * 111) + 9
+						randomTarget = getRandomNum(120, 9)
 						document.querySelector("#losses").innerHTML = "losses: " + losses
 						setGame()
 					}
